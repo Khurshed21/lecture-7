@@ -23,8 +23,44 @@ Map objects are collections of key-value pairs. A key in the Map may only occur 
 ___
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-904Mu63_Khsv6oFAytiCcxYnBiuJhir180_74FEEig&s)
 ___
+``` JavaScript
+const map1 = new Map();
+
+map1.set('a', 1);
+map1.set('b', 2);
+map1.set('c', 3);
+
+console.log(map1.get('a'));
+// Expected output: 1
+
+map1.set('a', 97);
+
+console.log(map1.get('a'));
+// Expected output: 97
+
+console.log(map1.size);
+// Expected output: 3
+
+map1.delete('b');
+
+console.log(map1.size);
+// Expected output: 2
+```
+___
+
 # What is new Set in JavaScript ?
 
 A JavaScript Set is a collection of unique values. Each value can only occur once in a Set. A Set can hold any value of any data type.
 
 ![](https://miro.medium.com/v2/resize:fit:1016/1*VZ7dOZJ9Ac4puGUzc0QluQ.png)
+___
+
+``` JavaScript
+const a = new Set([1, 2, 3]);
+const b = new Map([
+  [1, "one"],
+  [2, "two"],
+  [4, "four"],
+]);
+console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
+```
